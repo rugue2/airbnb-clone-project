@@ -54,6 +54,9 @@ The AirBnB Clone project requires a diverse team of professionals, each bringing
 - **Frontend Developer:** Works closely with backend team to integrate APIs and create user interfaces
 - **UI/UX Designer:** Designs user-friendly interfaces and optimizes user experience flows
 
+
+
+
 ## Technology Stack
 
 The AirBnB Clone project leverages a modern and robust technology stack to ensure scalability, performance, and maintainability. Below are the key technologies and their specific purposes in the project:
@@ -78,6 +81,9 @@ The AirBnB Clone project leverages a modern and robust technology stack to ensur
 
 ### Development and Operations
 - **CI/CD Pipelines:** Automated continuous integration and deployment pipelines for testing code changes, ensuring code quality, and deploying applications reliably to production environments.
+
+
+
 
 ## Database Design
 
