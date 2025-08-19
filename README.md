@@ -79,3 +79,88 @@ The AirBnB Clone project leverages a modern and robust technology stack to ensur
 ### Development and Operations
 - **CI/CD Pipelines:** Automated continuous integration and deployment pipelines for testing code changes, ensuring code quality, and deploying applications reliably to production environments.
 
+## Database Design
+
+The AirBnB Clone project utilizes a well-structured relational database design to efficiently manage and store data. Below are the key entities and their relationships:
+
+### Core Entities
+
+#### Users
+**Key Fields:**
+- `user_id` (Primary Key): Unique identifier for each user
+- `email`: User's email address for authentication and communication
+- `password_hash`: Securely hashed password for authentication
+- `first_name`: User's first name
+- `last_name`: User's last name
+- `phone_number`: Contact phone number
+- `role`: User role (guest, host, admin)
+- `created_at`: Account creation timestamp
+
+#### Properties
+**Key Fields:**
+- `property_id` (Primary Key): Unique identifier for each property
+- `host_id` (Foreign Key): References the user who owns the property
+- `name`: Property title/name
+- `description`: Detailed description of the property
+- `location`: Property address/location
+- `price_per_night`: Nightly rental rate
+- `created_at`: Property listing creation timestamp
+- `updated_at`: Last modification timestamp
+
+#### Bookings
+**Key Fields:**
+- `booking_id` (Primary Key): Unique identifier for each booking
+- `property_id` (Foreign Key): References the booked property
+- `user_id` (Foreign Key): References the user making the booking
+- `start_date`: Check-in date
+- `end_date`: Check-out date
+- `total_price`: Total cost of the booking
+- `status`: Booking status (pending, confirmed, cancelled, completed)
+- `created_at`: Booking creation timestamp
+
+#### Reviews
+**Key Fields:**
+- `review_id` (Primary Key): Unique identifier for each review
+- `property_id` (Foreign Key): References the reviewed property
+- `user_id` (Foreign Key): References the user leaving the review
+- `rating`: Numerical rating (e.g., 1-5 stars)
+- `comment`: Written review text
+- `created_at`: Review creation timestamp
+
+#### Payments
+**Key Fields:**
+- `payment_id` (Primary Key): Unique identifier for each payment
+- `booking_id` (Foreign Key): References the associated booking
+- `amount`: Payment amount
+- `payment_method`: Payment method used (credit card, PayPal, etc.)
+- `payment_status`: Status of the payment (pending, completed, failed, refunded)
+- `transaction_id`: External payment processor transaction ID
+- `created_at`: Payment creation timestamp
+
+### Entity Relationships
+
+#### User Relationships
+- **One-to-Many**: A user can own multiple properties (as a host)
+- **One-to-Many**: A user can make multiple bookings (as a guest)
+- **One-to-Many**: A user can write multiple reviews
+- **Indirect**: A user receives payments through their property bookings
+
+#### Property Relationships
+- **Many-to-One**: Each property belongs to one host (user)
+- **One-to-Many**: A property can have multiple bookings
+- **One-to-Many**: A property can have multiple reviews
+- **Indirect**: A property generates payments through bookings
+
+#### Booking Relationships
+- **Many-to-One**: Each booking belongs to one property
+- **Many-to-One**: Each booking belongs to one user (guest)
+- **One-to-One**: Each booking has one associated payment
+
+#### Review Relationships
+- **Many-to-One**: Each review belongs to one property
+- **Many-to-One**: Each review is written by one user
+
+#### Payment Relationships
+- **One-to-One**: Each payment is associated with one booking
+- **Indirect**: Payments connect users (through bookings) and properties
+
