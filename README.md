@@ -53,3 +53,29 @@ The AirBnB Clone project requires a diverse team of professionals, each bringing
 - **Project Manager:** Coordinates team activities, manages timelines, and ensures project deliverables meet requirements
 - **Frontend Developer:** Works closely with backend team to integrate APIs and create user interfaces
 - **UI/UX Designer:** Designs user-friendly interfaces and optimizes user experience flows
+
+## Technology Stack
+
+The AirBnB Clone project leverages a modern and robust technology stack to ensure scalability, performance, and maintainability. Below are the key technologies and their specific purposes in the project:
+
+### Backend Framework
+- **Django:** A high-level Python web framework that enables rapid development and clean, pragmatic design. Used as the core framework for building the backend API and handling business logic.
+- **Django REST Framework:** A powerful and flexible toolkit for building Web APIs in Django. Provides comprehensive tools for creating RESTful APIs with features like serialization, authentication, and viewsets.
+
+### Database
+- **PostgreSQL:** A powerful, open-source relational database system known for its reliability and advanced features. Used for storing all application data including users, properties, bookings, and reviews with strong data integrity and ACID compliance.
+
+### API Technologies
+- **GraphQL:** A flexible query language and runtime for APIs that allows clients to request exactly the data they need. Provides an efficient alternative to REST for complex data fetching requirements.
+- **OpenAPI Standard:** Used for documenting REST APIs to ensure clarity, consistency, and ease of integration for frontend developers and third-party consumers.
+
+### Caching and Task Management
+- **Redis:** An in-memory data structure store used for caching frequently accessed data and session management to improve application performance and reduce database load.
+- **Celery:** A distributed task queue system for handling asynchronous operations such as sending email notifications, processing payments, and generating reports without blocking the main application thread.
+
+### Containerization and Deployment
+- **Docker:** A containerization platform that ensures consistent development and deployment environments across different systems, simplifying application deployment and scaling.
+
+### Development and Operations
+- **CI/CD Pipelines:** Automated continuous integration and deployment pipelines for testing code changes, ensuring code quality, and deploying applications reliably to production environments.
+
