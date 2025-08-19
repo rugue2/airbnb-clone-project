@@ -166,6 +166,30 @@ The AirBnB Clone project utilizes a well-structured relational database design t
 - **Many-to-One**: Each review belongs to one property
 - **Many-to-One**: Each review is written by one user
 
+
+
+
+## Feature Breakdown
+
+The AirBnB Clone project encompasses several core features that work together to create a comprehensive property rental platform. Each feature is designed to provide specific functionality while integrating seamlessly with other system components.
+
+### User Management
+This feature handles all aspects of user accounts including registration, authentication, and profile management. It provides secure login/logout functionality, password management, and user role assignment (guest, host, admin). The system ensures data security through proper authentication mechanisms and allows users to maintain and update their personal information throughout their platform experience.
+
+### Property Management
+Property management enables hosts to create, update, and manage their rental listings effectively. Hosts can add detailed property descriptions, upload photos, set pricing, specify availability, and manage property amenities. This feature serves as the foundation of the marketplace, allowing property owners to showcase their rentals and attract potential guests through comprehensive and appealing listings.
+
+### Booking System
+The booking system facilitates the core transaction between guests and hosts by managing reservation requests and confirmations. It handles date availability checking, booking conflicts prevention, pricing calculations, and booking status tracking (pending, confirmed, cancelled, completed). This feature ensures a smooth reservation process while maintaining data integrity and preventing double bookings.
+
+### Payment Processing
+This feature handles all financial transactions within the platform, including payment collection, processing, and distribution. It integrates with external payment processors to securely handle credit card transactions, manages payment status tracking, and supports various payment methods. The system ensures secure financial operations while providing transparency for both guests and hosts regarding transaction details.
+
+### Review System
+The review system enables guests to share feedback and rate their accommodation experiences, fostering trust and quality improvement within the platform. Users can leave detailed reviews with star ratings, helping future guests make informed decisions while providing hosts with valuable feedback. This feature contributes to the platform's credibility and helps maintain high service standards across all listings.
+
+### Data Optimization
+Data optimization focuses on ensuring efficient database performance through strategic indexing, caching, and query optimization. This feature implements performance enhancements that reduce response times, improve user experience, and ensure the platform can scale effectively. It includes database indexing for frequently accessed data and caching strategies to minimize database load during peak usage periods.
 #### Payment Relationships
 - **One-to-One**: Each payment is associated with one booking
 - **Indirect**: Payments connect users (through bookings) and properties
