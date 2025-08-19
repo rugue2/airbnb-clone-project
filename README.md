@@ -194,3 +194,54 @@ Data optimization focuses on ensuring efficient database performance through str
 - **One-to-One**: Each payment is associated with one booking
 - **Indirect**: Payments connect users (through bookings) and properties
 
+
+
+
+
+
+## API Security
+
+Security is paramount in the AirBnB Clone project as it handles sensitive user information, financial transactions, and property data. A comprehensive security framework is implemented to protect against various threats and ensure user trust and platform integrity.
+
+### Authentication & Authorization
+
+#### JWT Token Authentication
+The system implements JSON Web Token (JWT) based authentication for secure user sessions and API access. JWTs provide stateless authentication, allowing for scalable session management while ensuring that only authenticated users can access protected resources. This is crucial for protecting user accounts and preventing unauthorized access to personal information, booking history, and property management features.
+
+#### Role-Based Access Control (RBAC)
+Authorization is managed through role-based permissions (guest, host, admin) ensuring users can only access resources and perform actions appropriate to their role. This prevents guests from accessing host-only features like property management, and ensures administrative functions remain restricted to authorized personnel only.
+
+### Data Protection
+
+#### Password Security
+User passwords are securely hashed using industry-standard algorithms (bcrypt) with salt to prevent rainbow table attacks. Strong password policies are enforced to ensure user account security. This is essential for protecting user accounts from unauthorized access and maintaining user trust in the platform's security measures.
+
+#### Data Encryption
+Sensitive data including personal information, payment details, and communication between users is encrypted both in transit (HTTPS/TLS) and at rest. Database encryption ensures that even if data is compromised, it remains unreadable without proper decryption keys, protecting user privacy and compliance with data protection regulations.
+
+### API Security Measures
+
+#### Rate Limiting
+API endpoints implement rate limiting to prevent abuse, DDoS attacks, and excessive resource consumption. Different endpoints have tailored limits based on their sensitivity and usage patterns. This is particularly important for preventing automated attacks on authentication endpoints and ensuring fair resource allocation among legitimate users.
+
+#### Input Validation & Sanitization
+All user inputs are validated and sanitized to prevent injection attacks (SQL injection, XSS, CSRF). Strict input validation ensures data integrity and prevents malicious code execution. This is critical for protecting the database and preventing attackers from manipulating or stealing sensitive information.
+
+#### API Versioning & Documentation Security
+API endpoints are versioned and documented with security considerations, including authentication requirements and access permissions for each endpoint. This ensures that security measures are clearly communicated and consistently implemented across all API interactions.
+
+### Payment Security
+
+#### PCI Compliance
+Payment processing follows PCI DSS (Payment Card Industry Data Security Standard) requirements, ensuring that credit card information is handled securely. Integration with trusted payment processors ensures that sensitive financial data never directly touches the application servers, reducing the risk of financial data breaches.
+
+#### Transaction Monitoring
+All payment transactions are monitored for suspicious activities, with automated fraud detection systems in place. This protects both guests and hosts from fraudulent transactions and ensures the financial integrity of the platform.
+
+### Security Monitoring & Logging
+
+#### Audit Trails
+Comprehensive logging of user actions, API calls, and system events creates detailed audit trails for security monitoring and incident response. This enables quick identification of security breaches and provides accountability for all platform activities.
+
+#### Real-time Threat Detection
+Security monitoring systems track unusual patterns, failed authentication attempts, and potential security threats in real-time, enabling rapid response to security incidents and maintaining platform integrity.
